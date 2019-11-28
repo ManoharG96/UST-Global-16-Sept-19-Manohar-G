@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@page  %>
+    <%@include file="/index.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>include JSP</title>
+</head>
+<body>
+
+<jsp:include page="/first"></jsp:include>
+<h1 style="color: blue;">This is include JSP</h1>
+</body>
+</html>
