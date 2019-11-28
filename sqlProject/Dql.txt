@@ -1,0 +1,60 @@
+DQl : -
+=>Data Query Language
+=>SELECT
+=>The SQL statements used to retrive the data from database is known as DQL .
+=> Projection :- To Select  a particular column , we will go for projection .
+		select column_name from table_name;
+	e.g: 	select pname from product;
+=>Selection : - We can get data from both row and column
+______________________________________________
+Order of Execution :
+1.From
+2.select
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

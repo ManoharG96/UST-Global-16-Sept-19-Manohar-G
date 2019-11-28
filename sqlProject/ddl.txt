@@ -1,0 +1,34 @@
+CREATE database:						|
+	CREATE DATABASE DB_NAME;				|
+________________________________________________________________|
+show databases;							|
+	shows all the databases present				|
+________________________________________________________________|
+use database;							|	
+use amazon;							|
+	first we need to use this command before creating tables|
+________________________________________________________________|
+creating table :-						|	
+create table table_name(CN1 datatype ,CN2 datatype)		|
+create table product(pid int ,pname varchar(120),quantity int);	|	
+________________________________________________________________|
+show tables;							|
+________________________________________________________________|
+desc product;							|
+it shows all the fields , types					|	
+________________________________________________________________|
+drop database amazon;						|
+drop table product;						|
+________________________________________________________________|
+Alter :								|
+1.Adding new Column:						|
+->alter table product add column price int;			|
+2.Change name of the column:					|
+->alter table product change column price cost int;		|
+3.delete column							|
+->alter table product drop column cost;				|
+________________________________________________________________|
+Rename table:							|
+rename table product to  pro;					|
+________________________________________________________________|
+

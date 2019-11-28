@@ -1,0 +1,38 @@
+Insert :-
+	insert into table_name(column_name1,column_name2,column_name3) values(value 1,value 2,value 3);
+e.g :-
+	insert into product(pid,pname,quantity) values(101,'pensil',10);
+	insert into product(pid,pname,quantity) values(102,'pen',8);
+	insert into product(pid,pname,quantity) values(103,'scale',4);
+	insert into product(pid,pname,quantity) values(104,'Eraser',4);
+					
+					(OR)
+
+		insert into product values(105,'color pensil',20);
+To Cross Check :
+		select * from product;
+			
+
+
+TO INSERT ONLY IN TWO COLUMNS :-
+		if we wont insert data into all columns , then the empty columns will be 
+		treated as NULL .
+
+		insert into product(pid,pname) values(106,'book');
+
+To insert more than one value at a time in a table :-
+
+		insert into product(pid,pname,quantity) values(107,'Protractor',1) , (108,'sketch',18); 
+_______________________________________________________________________________________________
+UPDATE :
+	=>To update a record
+syntax :-
+update tablename set  column_name = value;
+update product set quantity =100;
+	=>It will update the entire column 
+________________________________________________
+Delete :
+	=>delete the record
+delete from  table-name;
+delete from product;
+

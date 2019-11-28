@@ -1,0 +1,129 @@
+Arithmetic operatoors:- +,-,/,% ,*
+____________________________
+select salary*12 from emp;
+
+Relational operators:- =,<,>,<=,>=
+________________________________
+select designation from employee where designation ='developer';
+
+Logical Operators :-
+________________________________
+AND ->	_________
+	T & F ->F
+	T & T ->T
+	F & F ->F
+	F & T ->F
+	_________
+	select * from table_name where  condition 1 and condition 2 ;
+OR ->
+	T | T ->T
+	T | F ->T
+	F | T ->T
+	F | F->F
+	select * from table_name where  condition 1 and condition 2 ;
+
+NOT->
+
+T ->F
+F->T
+select * from table_name where not condition
+
+1.WQ to display all the employee details who is working in department number 20 and as well as salary is greater than 25000
+
+ select * from emp where deptno=20 and salary>45000;
+
++------+------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| eid  | ename      | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                         | gender | designation |
++------+------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| 4227 | jaya Pavan | 8187068632 | 1996-05-12 |   22 | 2019-07-15 | A-ve        |     20 |  70000 | jayapavaankumar2580@gmail.com | male   | Tester      |
++------+------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+
+_________________________________________________________________________________________________________________________
+2 .WQ to display name ,salary from the employee table who is working in department number 10 and 20 .
+
+ select  ename , salary from emp where deptno=10 or deptno=20;
+
++-----------------------+--------+
+| ename                 | salary |
++-----------------------+--------+
+| Swathi                |  20000 |
+| Sammakka              |  17300 |
+| sreekanth reddy       |  50000 |
+| yashwanth krishna sai |  50000 |
+| jaya Pavan            |  70000 |
+
+3.WQ to display emplloyee details who job as tester and age>20
+
+select * from emp where designation='tester' and age>20;
+
++------+------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| eid  | ename      | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                         | gender | designation |
++------+------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| 4227 | jaya Pavan | 8187068632 | 1996-05-12 |   22 | 2019-07-15 | A-ve        |     20 |  70000 | jayapavaankumar2580@gmail.com | male   | Tester      |
+
+4.WQ to display all the record of the employee who working as a tester or salary >40000 ;
+
+mysql> select * from emp where designation ='tester' or salary >45000;
+
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| eid  | ename                 | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                            | gender | designation |
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| 4096 | Bandakka              | 9666214782 | 1995-12-04 |   23 | 2019-07-11 | O+ve        |     40 |  55000 | pilla.bandakka1995@gmail.com     | Female | HR          |
+| 4098 | sreekanth reddy       | 8374036361 | 1997-03-12 |   21 | 2019-10-16 | o+ve        |     10 |  50000 | sreekanthcsc1997@gmail.com       | male   | developer   |
+| 4107 | yashwanth krishna sai | 7065478975 | 1997-05-26 |   22 | 2019-05-08 | B-ve        |     10 |  50000 | rama.yash.cse1998@gmail.com      | male   | developer   |
+| 4145 | sai pavan             | 7092122355 | 1997-06-21 |   21 | 2018-04-15 | B+ve        |     30 |  92000 | dalusaipavan@gmail.com           | male   | Manager     |
+| 4227 | jaya Pavan            | 8187068632 | 1996-05-12 |   22 | 2019-07-15 | A-ve        |     20 |  70000 | jayapavaankumar2580@gmail.com    | male   | Tester      |
+| 5158 | Manoj kumar reddy     | 7092122352 | 1998-10-23 |   20 | 2019-07-15 | A-ve        |     50 |  70456 | manojkumarreddy.p@gmail.com      | male   | HR          |
+| 9303 | uday krishna          | 9666166872 | 1996-07-09 |   20 | 2016-01-27 | B-ve        |     40 |  55000 | kammaudaykrishna.krish@gmail.com | male   | supporter   |
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+
+4.WQ to display name, age ,salary from employee table whose working in department number 10 or 40 or 50
+
+select ename,age,salary from emp where deptno =10 or deptno=40 or deptno =50;
+
++-----------------------+------+--------+
+| ename                 | age  | salary |
++-----------------------+------+--------+
+| Bandakka              |   23 |  55000 |
+| sreekanth reddy       |   21 |  50000 |
+| yashwanth krishna sai |   22 |  50000 |
+| Manoj kumar reddy     |   20 |  70456 |
+| uday krishna          |   20 |  55000 |
+
+5. WQ to display employee details of employee whose age is more than 25 and blood group is b+ve
+
+ select * from emp where age>25 or  blood_group ='B+ve';
+
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| eid  | ename                 | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                         | gender | designation |
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| 3096 | Swathi                | 9959920015 | 1995-10-15 |   26 | 2018-12-28 | O-ve        |     20 |  20000 | chitti893@gmail.com           | Female | Manager     |
+| 4056 | Sammakka              | 9666309621 | 1993-10-15 |   26 | 2018-12-28 | A+ve        |     20 |  17300 | samakka.sarakka.95@gmail.com  | Female | clerk       |
+| 4096 | Bandakka              | 9666214782 | 1995-12-04 |   23 | 2019-07-11 | O+ve        |     40 |  55000 | pilla.bandakka1995@gmail.com  | Female | HR          |
+| 4098 | sreekanth reddy       | 8374036361 | 1997-03-12 |   21 | 2019-10-16 | o+ve        |     10 |  50000 | sreekanthcsc1997@gmail.com    | male   | developer   |
+| 4107 | yashwanth krishna sai | 7065478975 | 1997-05-26 |   22 | 2019-05-08 | B-ve        |     10 |  50000 | rama.yash.cse1998@gmail.com   | male   | developer   |
+| 4145 | sai pavan             | 7092122355 | 1997-06-21 |   21 | 2018-04-15 | B+ve        |     30 |  92000 | dalusaipavan@gmail.com        | male   | Manager     |
+| 4227 | jaya Pavan            | 8187068632 | 1996-05-12 |   22 | 2019-07-15 | A-ve        |     20 |  70000 | jayapavaankumar2580@gmail.com | male   | Tester      |
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+
+6.WQ to display all the record of the employee  excluding tester .
+
+select * from emp where  not designation ='tester';
+
+7.WQTD all the employess  excluding developer ,who are working in department number 40
+mysql> select * from emp where deptno = 40 and not designation='developer';
++------+--------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| eid  | ename        | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                            | gender | designation |
++------+--------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| 4096 | Bandakka     | 9666214782 | 1995-12-04 |   23 | 2019-07-11 | O+ve        |     40 |  55000 | pilla.bandakka1995@gmail.com     | Female | HR          |
+| 9303 | uday krishna | 9666166872 | 1996-07-09 |   20 | 2016-01-27 | B-ve        |     40 |  55000 | kammaudaykrishna.krish@gmail.com | male   | supporter   |
++------+--------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+
+* NOt ,And , Or is  the order of execution
+8.WQ to display all the clerk who  are working for department number for 10,40  .
+
+select * from emp where designation = 'clerk' and (deptno=10 or deptno=20);
++------+----------+------------+------------+------+------------+-------------+--------+--------+------------------------------+--------+-------------+
+| eid  | ename    | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                        | gender | designation |
++------+----------+------------+------------+------+------------+-------------+--------+--------+------------------------------+--------+-------------+
+| 4056 | Sammakka | 9666309621 | 1993-10-15 |   26 | 2018-12-28 | A+ve        |     20 |  17300 | samakka.sarakka.95@gmail.com | Female | clerk       |

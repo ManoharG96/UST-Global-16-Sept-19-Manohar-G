@@ -1,0 +1,152 @@
+IN - it is used to evaluating multiple values .
+Syntax :
+SELECT * FROM TABLE_NAME WHERE COLUMN_NAME IN(list of values);
+1 . WQ to display all the detail of the employee who are working in 40  , 50 ,70
+
+ select * from emp where deptno in(40,50,70,80);
++------+-------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| eid  | ename             | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                            | gender | designation |
++------+-------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| 4096 | Bandakka          | 9666214782 | 1995-12-04 |   23 | 2019-07-11 | O+ve        |     40 |  55000 | pilla.bandakka1995@gmail.com     | Female | HR          |
+| 5158 | Manoj kumar reddy | 7092122352 | 1998-10-23 |   20 | 2019-07-15 | A-ve        |     50 |  70456 | manojkumarreddy.p@gmail.com      | male   | HR          |
+| 9303 | uday krishna      | 9666166872 | 1996-07-09 |   20 | 2016-01-27 | B-ve        |     40 |  55000 | kammaudaykrishna.krish@gmail.com | male   | supporter   |
+
+2 .WQ to display name of all the employees who as working as tester ,HR and developer
+
+select * from emp where designation in('HR','tester','admin');
+
+mysql> select * from emp where designation in('HR','tester','admin');
+
++------+-------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| eid  | ename             | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                         | gender | designation |
++------+-------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| 4096 | Bandakka          | 9666214782 | 1995-12-04 |   23 | 2019-07-11 | O+ve        |     40 |  55000 | pilla.bandakka1995@gmail.com  | Female | HR          |
+| 4227 | jaya Pavan        | 8187068632 | 1996-05-12 |   22 | 2019-07-15 | A-ve        |     20 |  70000 | jayapavaankumar2580@gmail.com | male   | Tester      |
+| 5158 | Manoj kumar reddy | 7092122352 | 1998-10-23 |   20 | 2019-07-15 | A-ve        |     50 |  70456 | manojkumarreddy.p@gmail.com   | male   | HR          |
++------+-------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+
+3. WQ to display the detail of tester , admin ,developer ,who are working in deptno 20 0r 30 and salary greater than 40000
+
+select * from emp where designation in('tester','developer','admin') and deptno in(20,30) and salary>40000;
+
++------+------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| eid  | ename      | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                         | gender | designation |
++------+------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| 4227 | jaya Pavan | 8187068632 | 1996-05-12 |   22 | 2019-07-15 | A-ve        |     20 |  70000 | jayapavaankumar2580@gmail.com | male   | Tester      |
+
+4.WQ to display  all the record of the employee excluding who as working as tester ,hr ,admin 
+
+mysql> select * from emp where designation not in('tester','hr','admin');
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| eid  | ename                 | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                            | gender | designation |
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| 3096 | Swathi                | 9959920015 | 1995-10-15 |   26 | 2018-12-28 | O-ve        |     20 |  20000 | chitti893@gmail.com              | Female | Manager     |
+| 4056 | Sammakka              | 9666309621 | 1993-10-15 |   26 | 2018-12-28 | A+ve        |     20 |  17300 | samakka.sarakka.95@gmail.com     | Female | clerk       |
+| 4098 | sreekanth reddy       | 8374036361 | 1997-03-12 |   21 | 2019-10-16 | o+ve        |     10 |  50000 | sreekanthcsc1997@gmail.com       | male   | developer   |
+| 4107 | yashwanth krishna sai | 7065478975 | 1997-05-26 |   22 | 2019-05-08 | B-ve        |     10 |  50000 | rama.yash.cse1998@gmail.com      | male   | developer   |
+| 4145 | sai pavan             | 7092122355 | 1997-06-21 |   21 | 2018-04-15 | B+ve        |     30 |  92000 | dalusaipavan@gmail.com           | male   | Manager     |
+| 9303 | uday krishna          | 9666166872 | 1996-07-09 |   20 | 2016-01-27 | B-ve        |     40 |  55000 | kammaudaykrishna.krish@gmail.com | male   | supporter   |
+
+5. WQ to display all the record of the employee whose age is  19,20 ,25,30,40 exclude all the details of tester and developer
+
+ select * from emp where age in(20,21,22,23,24,25,26) and designation not in('tester','developer');
++------+-------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| eid  | ename             | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                            | gender | designation |
++------+-------------------+------------+------------+------+------------+-------------+--------+--------+----------------------------------+--------+-------------+
+| 3096 | Swathi            | 9959920015 | 1995-10-15 |   26 | 2018-12-28 | O-ve        |     20 |  20000 | chitti893@gmail.com              | Female | Manager     |
+| 4056 | Sammakka          | 9666309621 | 1993-10-15 |   26 | 2018-12-28 | A+ve        |     20 |  17300 | samakka.sarakka.95@gmail.com     | Female | clerk       |
+| 4096 | Bandakka          | 9666214782 | 1995-12-04 |   23 | 2019-07-11 | O+ve        |     40 |  55000 | pilla.bandakka1995@gmail.com     | Female | HR          |
+| 4145 | sai pavan         | 7092122355 | 1997-06-21 |   21 | 2018-04-15 | B+ve        |     30 |  92000 | dalusaipavan@gmail.com           | male   | Manager     |
+| 5158 | Manoj kumar reddy | 7092122352 | 1998-10-23 |   20 | 2019-07-15 | A-ve        |     50 |  70456 | manojkumarreddy.p@gmail.com      | male   | HR          |
+| 9303 | uday krishna      | 9666166872 | 1996-07-09 |   20 | 2016-01-27 | B-ve        |     40 |  55000 | kammaudaykrishna.krish@gmail.com | male   | supporter   |
+
+
+BETWEEN : -
+
+IT IS USED FOR SEARCHING  BASED ON RANGE OF VALUES
+
+SELECT * FROM table_name WHERE column_name Between values1  and values 2
+
+1 . WQ to display  all the detail of the employee whose age is in between 20 to 40
+
+ select ename ,eid from emp where age between 20 and 25;
+
++-----------------------+------+
+| ename                 | eid  |
++-----------------------+------+
+| Bandakka              | 4096 |
+| sreekanth reddy       | 4098 |
+| yashwanth krishna sai | 4107 |
+| sai pavan             | 4145 |
+| jaya Pavan            | 4227 |
+| Manoj kumar reddy     | 5158 |
+| uday krishna          | 9303 | 
+
+2. WQ  to display all the details of the employee hired during 2017
+select * from emp where doj between'2019-01-01' and '2019-12-30';
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| eid  | ename                 | mobile     | dob        | age  | doj        | blood_group | deptno | salary | email                         | gender | designation |
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+| 4096 | Bandakka              | 9666214782 | 1995-12-04 |   23 | 2019-07-11 | O+ve        |     40 |  55000 | pilla.bandakka1995@gmail.com  | Female | HR          |
+| 4098 | sreekanth reddy       | 8374036361 | 1997-03-12 |   21 | 2019-10-16 | o+ve        |     10 |  50000 | sreekanthcsc1997@gmail.com    | male   | developer   |
+| 4107 | yashwanth krishna sai | 7065478975 | 1997-05-26 |   22 | 2019-05-08 | B-ve        |     10 |  50000 | rama.yash.cse1998@gmail.com   | male   | developer   |
+| 4227 | jaya Pavan            | 8187068632 | 1996-05-12 |   22 | 2019-07-15 | A-ve        |     20 |  70000 | jayapavaankumar2580@gmail.com | male   | Tester      |
+| 5158 | Manoj kumar reddy     | 7092122352 | 1998-10-23 |   20 | 2019-07-15 | A-ve        |     50 |  70456 | manojkumarreddy.p@gmail.com   | male   | HR          |
++------+-----------------------+------------+------------+------+------------+-------------+--------+--------+-------------------------------+--------+-------------+
+
+3.WQ to display all the records of employee excluding salary is in the range of 25k to 30k
+
+select eid,ename,salary from emp where salary between 45000 and 50000;
+
++------+-----------------------+--------+
+| eid  | ename                 | salary |
++------+-----------------------+--------+
+| 4098 | sreekanth reddy       |  50000 |
+| 4107 | yashwanth krishna sai |  50000 |      
+
+IS OPERATOR : -
+IS OPERATOR IS USED IN THE CASE OF NULL values
+SYNTAX :-
+	select * from table_name where colum_name is null ;
+LIKE OPERATOR :-
+IT IS USED FOR PATTERN MATCHING
+%(PERCENTAGE) -MATCHES 0 OR N CHARACTERS
+_ (UNDERSCORE) -MATCHES EXACTLY ONE CHARACTER
+SYNTAX	:-
+select * from table_name where column_name like'%/_';
+%-matches 0 or n characters
+_ -matches eexactly one character
+1.WQ to display all the details of the employee whose name starts with 's'
+
+select ename from emp where ename like 's%';
+
+2.WQ to display name of the employee whose second character is 'a'
+
+select ename from emp where ename like '_a%';
++-----------------------+
+| ename                 |
++-----------------------+
+| Sammakka              |
+| Bandakka              |
+| yashwanth krishna sai |
+| sai pavan             |
+| jaya Pavan            |
+| Manoj kumar reddy     |
++-----------------------+
+
+3.WQ to display the name of the employee which has at least 2 L's in their name
+
+select ename from emp where ename like '%a%a%';
+
++-----------------------+
+| ename                 |
++-----------------------+
+| Sammakka              |
+| Bandakka              |
+|  manogna              |
+| yashwanth krishna sai |
+| sai pavan             |
+| jaya Pavan            |
+| Manoj kumar reddy     |
+| uday krishna          |
+4.WQ 

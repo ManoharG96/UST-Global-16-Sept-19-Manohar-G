@@ -1,0 +1,44 @@
+Distinct : 
+	=>return only distinct (different) values 
+	=>select distinct column_name from table_name ;
+	=>select distinct deptno ,designation from emp;
+_____________________________________________________
+ALIAS :
+=>temporary name given to the column_name and table_name .
+=>select column_name as alias_name from table_name
+=>select eid as ID from emp;
+=> select eid as ID ,ename as NAME from emp;
+=>select eid ID from emp;
+______________________________________________________
+where :
+=>To pass any condition
+=>To filter records
+=>the where clause is used to extract only those records that fullfill a specified condition
+=>select * from table_name where condition;
+
+update using where clause:-
+
+=>update emp set  mobile=8187068632 where eid=4227;
+
+Delete usinng where clause :
+
+=>delete from emp where eid=4097;
+
+To Fetch a record :
+ 
+select * from emp where eid=4098;
+=>where condition is used with only update,delete and fetching
+__________________________________________________________
+Expression : -
+--> combination of operators and operands is called expression
+-->	column_name , Literals->character,DATE , number
+_______________________________________________
+Order Of Execution :-
+
+ select * from table_name where column_name=value;
+->from->where->select->*
+from ->go to the database and select the table name if it there
+where->It filter the records in a table
+select->It will display the records
+* ->wildcard ,to display the entire record
+

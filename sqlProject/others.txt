@@ -1,0 +1,27 @@
+write a query name of the employee who second char is i.
+ans: select name from employee where name like 'a%_';
+write a query to dsiplay name of the employee which has alteast two AA in their name.
+ans: select name from employee where name like '%a%a%';
+functions: 1. aggragate functions and scalar function.
+aggregate fumction:
+ avg(), count(), max(), min(), sum()
+select sum(salary) from emp;
+select min(salary) from emp;
+select max(salary) from emp;
+select count(*) from emp;
+select avg(salary) from emp;
+
+order by:
+select col1, col2,... from table_name order by col1 asc|desc;
+select * from employee order by deptno desc;
+note : order statement excuit atlast in every query;
+
+write a query display all the result of the emp and salary should be in descending order;
+ans: select * from emp order by salary desc;
+
+query inside a query is known as subquery;
+
+outer query will give the final output. inner query is the input to the outer query;
+
+
+
