@@ -1,0 +1,4 @@
+console importance:
+1.See logged message
+2.Run JS code
+3.See error message.

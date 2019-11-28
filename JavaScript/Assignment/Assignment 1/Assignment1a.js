@@ -1,0 +1,10 @@
+var person = new Object('eye');
+var place = new Object('bangalore');
+var train = new Object('engine');
+var bus = new Object('driver');
+var man = new Object('hand');
+console.log('value', person);
+console.log('value', place);
+console.log('value', bus);
+console.log('value', train);
+console.log('value', man);
