@@ -1,0 +1,9 @@
+package com.ustglobal.webApp.servletChaining;
+
+import javax.servlet.http.HttpServlet;
+
+@WebData("/servlet1")
+public class Servlet1 extends HttpServlet{
+
+	
+}

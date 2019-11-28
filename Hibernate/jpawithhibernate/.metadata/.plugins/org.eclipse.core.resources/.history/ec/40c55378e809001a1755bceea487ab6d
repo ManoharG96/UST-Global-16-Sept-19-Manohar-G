@@ -1,0 +1,9 @@
+package com.ustglobal.webApp.servlets;
+
+import lombok.Data;
+
+@Data
+class Employee {
+	private int id;
+	private String name;
+}

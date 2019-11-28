@@ -1,0 +1,5 @@
+package com.ustglobal.employeeWebApp.servlet;
+
+public class SearchServlet {
+
+}

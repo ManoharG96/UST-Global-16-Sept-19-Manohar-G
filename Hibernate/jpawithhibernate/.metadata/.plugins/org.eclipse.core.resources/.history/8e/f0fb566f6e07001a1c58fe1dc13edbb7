@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="./loginform" method="post">
+		<div class="container">
+			<h3>LogIn Please</h3>
+			<label for="name"><b>Username</b></label> <input type="text" placeholder="Enter Username" name="name" required><br>
+			<label for="password"><b>Password</b></label> <input type="password" placeholder="Enter Password" name="password" required><br>
+			<button type="submit">Login</button>
+			<br> <label> <input type="checkbox" checked="checked" name="remember"> Remember me</label><br>
+		</div>
+
+	</form>
+</body>
+</html>

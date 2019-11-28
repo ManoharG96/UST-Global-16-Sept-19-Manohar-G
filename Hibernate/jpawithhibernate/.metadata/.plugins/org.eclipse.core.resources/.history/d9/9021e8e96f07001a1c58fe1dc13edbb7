@@ -1,0 +1,9 @@
+package com.ustglobal.employeeWebApp.dao;
+
+import com.ustglobal.employeeWebApp.dto.EmployeeInfo;
+
+public interface EmployeeDAO {
+	
+	public EmployeeInfo auth(int id, String password);
+
+}

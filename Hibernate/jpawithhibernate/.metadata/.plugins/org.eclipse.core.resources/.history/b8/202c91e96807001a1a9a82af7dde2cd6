@@ -1,0 +1,5 @@
+package com.ustglobal.employeeWebApp.dto;
+
+public class EmployeeInfo {
+
+}

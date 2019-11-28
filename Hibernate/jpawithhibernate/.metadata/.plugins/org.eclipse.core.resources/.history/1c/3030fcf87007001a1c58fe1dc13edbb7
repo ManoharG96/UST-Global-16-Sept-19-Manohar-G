@@ -1,0 +1,15 @@
+package com.ustglobal.employeeWebApp.util;
+
+import com.ustglobal.employeeWebApp.dao.EmployeeDAO;
+import com.ustglobal.employeeWebApp.dao.EmployeeDaoJdbcImpl;
+
+public class EmployeeDaoManager  {
+	
+	private EmployeeDaoManager() {
+	}
+	
+	public static EmployeeDAO getEmployeeDAO() {
+		return EmployeeDaoJdbcImpl();
+	}
+	
+}

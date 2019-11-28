@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>employee search page</title>
+</head>
+<body>
+	<form action="./searchForm">
+		<div class="container" align="center">
+			<h3>employee search page</h3>
+			<label> <input type="search" placeholder="enter the id">
+				<button type="submit">search</button>
+			</label>
+		</div>
+	</form>
+</body>
+</html>

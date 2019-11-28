@@ -1,0 +1,96 @@
+package com.ustglobal.employeeWebApp.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.ustglobal.employeeWebApp.dto.EmployeeInfo;
+
+public class EmployeeDaoJdbcImpl implements EmployeeDAO {
+	
+	private final String url = "jdbc:mysql://localhost:3306/ust_web_db";
+	
+	@Override
+	public EmployeeInfo auth(int id, String password) {
+		
+		return null;
+	}
+
+	@Override
+	public EmployeeInfo searchEmployee(int id) {
+
+		String sql = "select * from employee_info where eId=?";
+	
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, "root", "root");
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setInt(1, id);
+			ResultSet set = stmt.executeQuery();
+
+			if (set.next()) {
+				EmployeeInfo bean = new EmployeeInfo();
+				bean.setId(set.getInt("id"));
+				bean.setName(set.getString("name"));
+				bean.setEmail(set.getString("email"));
+				bean.setPassword(set.getString("password"));	
+			}else 
+				return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		return bean;
+	}
+
+	@Override
+	public boolean changePassword(int id, String password) {
+		int count=0;
+		String sql = "update employee_info set password=? where id=?";
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, "root", "root");
+			PreparedStatement stmt = con.prepareStatement(sql);
+
+			stmt.setString(1, password);
+			stmt.setInt(2, id);
+			count = stmt.executeUpdate();
+
+			boolean check = count>0? true : false;
+			return check;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+
+	}
+
+	@Override
+	public boolean registerEmployee(EmployeeInfo info) {
+		String sql = "insert into employee_info values(?,?,?,?)";
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,"root","root");
+			PreparedStatement stmt = con.prepareStatement(sql);
+
+			stmt.setInt(1, info.getId());
+			stmt.setString(2, info.getName());
+			stmt.setString(3, info.getEmail());
+			stmt.setString(4, info.getPassword());
+
+			int count = stmt.executeUpdate();
+
+			if (count>0)
+				return true;
+			else 
+				return false;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+}

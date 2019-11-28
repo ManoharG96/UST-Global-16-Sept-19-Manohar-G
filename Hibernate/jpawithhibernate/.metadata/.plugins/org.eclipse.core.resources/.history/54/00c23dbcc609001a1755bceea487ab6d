@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<%@page import="java.util.date"%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<%
+	Date date = new Date();
+%>
+
+<body>
+
+	<h1 style="color: green;">
+		Date and Time:
+		<%=date%></h1>
+		
+</body>
+</html>

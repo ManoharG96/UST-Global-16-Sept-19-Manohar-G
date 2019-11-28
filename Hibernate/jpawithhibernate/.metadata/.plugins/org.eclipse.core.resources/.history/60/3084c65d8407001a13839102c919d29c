@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="./changePassword">
+<div class="container" align="center">
+<h3>Password change page</h3>
+<label>
+<input type="text" placeholder="enter the new password" name="newpass">New Password
+ </label><br>
+ 
+<label> <input type="text" placeholder="enter the same password">Confirm Password</label>
+
+<button type="submit">Save</button>
+
+
+</div>
+
+</form>
+</body>
+</html>

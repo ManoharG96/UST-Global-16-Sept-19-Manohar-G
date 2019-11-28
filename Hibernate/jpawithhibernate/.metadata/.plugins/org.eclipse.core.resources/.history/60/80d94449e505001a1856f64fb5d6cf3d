@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="./form" method="post">
+		Name: <input name="empname" type="text"> <br>
+		Password: <input name="emppass" type="password"> <br>
+		MailId: <input name="empmail" type="email"> <br>
+		Sign Up<input type="submit" style="color: green">
+	</form>
+</body>
+</html>

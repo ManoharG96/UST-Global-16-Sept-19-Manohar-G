@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+	<form action="./homepage">
+		<div class="container" align="center">
+		<h1>WelCome to Employee DataBase</h1>
+		<a href=#>search</a>
+		<a href=#>change password</a>
+		<a href=#>logout</a>
+		
+		</div>
+
+	</form>
+</body>
+</html>

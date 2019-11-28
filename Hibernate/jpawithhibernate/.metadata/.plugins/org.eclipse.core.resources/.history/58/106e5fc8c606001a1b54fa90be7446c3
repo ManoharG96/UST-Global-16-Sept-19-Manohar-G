@@ -1,0 +1,5 @@
+package com.ustglobal.webApp.servlets;
+
+public class GetContextAttributeServlet {
+
+}

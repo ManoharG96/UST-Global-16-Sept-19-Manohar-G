@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>employee search page</title>
+</head>
+<body>
+<fieldset>
+	<form action="./search">
+		<div class="container" align="center">
+		<a href="./home">Home</a>
+			<a href="">Logout</a>
+			<h3>Employee Search Page</h3>
+			<label> <input type="search" placeholder="enter the id">
+				<button type="submit">search</button>
+				
+			</label>
+		</div>
+	</form>
+</fieldset>
+</body>
+</html>
