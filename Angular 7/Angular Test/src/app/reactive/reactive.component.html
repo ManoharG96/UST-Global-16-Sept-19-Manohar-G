@@ -1,0 +1,33 @@
+<div class="col-md-4 offset-4 mt-4 mb-4 card card-body">
+    <form action="" [formGroup]="form" (ngSubmit)="MovieData(form)">
+        <h4 class="text-center text-white bg-success">Add Movies</h4>
+        <div class="form-group">
+            <input type="text" name="name" id="name" class="form-control" placeholder="Movie Name" formControlName="name">
+            <div *ngIf="name.touched && name.invalid">
+                <p class="text-warning" *ngIf="name.errors.required">*enter the movie name</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="title" id="title" class="form-control" placeholder="Add the Title" formControlName="title">
+            <div *ngIf="title.touched && title.invalid">
+                    <p class="text-warning" *ngIf="title.errors.required">*add the title to the movie</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="imageUrl" id="imageUrl" class="form-control" placeholder="Add the image url of the movie " formControlName="imageUrl">
+            <div *ngIf="imageUrl.touched && imageUrl.invalid">
+                    <p class="text-warning" *ngIf="imageUrl.errors.required">*add the image url to the movie</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea name="description" id="description" class="form-control" cols="30" rows="10" placeholder="Write movie description" formControlName="description">
+            <div *ngIf="description.touched && description.invalid">
+                    <p class="text-warning" *ngIf="description.errors.required">*Write the description about the movie</p>
+            </div>
+            </textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Movie</button>
+        </div>
+    </form>
+</div>

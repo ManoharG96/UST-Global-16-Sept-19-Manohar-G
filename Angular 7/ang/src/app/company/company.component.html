@@ -1,0 +1,43 @@
+<form action="" class="col-md-4 offset-4 mt-5 card cadr-body" #form="ngForm"(ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">Company details</h1>
+<div class="form-group">
+    <input type="companyname" name="companyname" id="companyname" class="form-control" placeholder ="companyname" #companyname="ngModel"ngModel required>
+    <div *ngIf="companyname.touched && companyname.invalid">
+        <p class="alert-danger" *ngIf="companyname.errors.required">*This field is required</p>
+    </div>
+</div>
+<div class="form-group">
+    <input type="skills" name="skills" id="skills" class="form-control" placeholder="skills" #skills="ngModel"ngModel required>
+    <div *ngIf="skills.touched && skills.invalid">
+        <p class="alert-danger"   *ngIf="skills.errors.required">*This field is required</p>
+
+    </div>
+</div>
+<div class="form-group">
+    <input type="yearofexperience" name="yearofexperience" id="yearofexperience" class="form-control" placeholder="yearofexperience" #yearofexperience="ngModel"ngModel required>
+    <div *ngIf="yearofexperience.touched && yearofexperience.invalid">
+        <p class="alert-danger"   *ngIf="yearofexperience.errors.required">*This field is required</p>
+
+    </div>
+</div>
+<div class="form-group">
+    <input type="MCTC" name="MCTC" id="MCTC" class="form-control" placeholder="MCTC" #MCTC="ngModel"ngModel required>
+    <div *ngIf="MCTC.touched && MCTC.invalid">
+        <p class="alert-danger"   *ngIf="MCTC.errors.required">*This field is required</p>
+
+    </div>
+</div>
+<div class="form-group">
+    <input type="location" name="location" id="location" class="form-control" placeholder="location" #location="ngModel"ngModel required>
+    <div *ngIf="location.touched && location.invalid">
+        <p class="alert-danger"   *ngIf="location.errors.required">*This field is required</p>
+
+    </div>
+</div>
+<div class="form-group">
+    <button type="submit" class="btn-outline-success float-right">AddRequeried</button>
+</div>
+
+
+
+</form>

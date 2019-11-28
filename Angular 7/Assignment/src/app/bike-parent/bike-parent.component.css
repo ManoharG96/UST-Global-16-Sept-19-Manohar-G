@@ -1,0 +1,5 @@
+.col-md-3.mb-2.float-left.card{
+    height: 500px;
+    width: 500px;
+    overflow: scroll;
+}

@@ -1,0 +1,52 @@
+<form action="" class="col-md-4 offset-4 mt-5 card cadr-body" #form="ngForm"(ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">candidate details</h1>
+<div class="form-group">
+    <input type="CandidateName" name="CandidateName" id="CandidateName" class="form-control" placeholder ="Candidate Name....." #CandidateName="ngModel"ngModel required>
+    <div *ngIf="CandidateName.touched && CandidateName.invalid">
+        <p class="alert-danger" *ngIf="CandidateName.errors.required">*This field is required</p>
+    </div>
+</div>
+
+<div class="form-group">
+    <input type="yearofexperience" name="yearofexperience" id="yearofexperience" class="form-control" placeholder="year of experience..." #yearofexperience="ngModel"ngModel required>
+    <div *ngIf="yearofexperience.touched && yearofexperience.invalid">
+        <p class="alert-danger"   *ngIf="yearofexperience.errors.required">*This field is required</p>
+
+    </div>
+</div>
+
+<div class="form-group">
+<label for="Skills" >Skills</label><br>
+<input type="radio" name="Skills" value="java"> java<br>
+<input type="radio" name="Skills" value="sql"> sql<br>
+<input type="radio" name="Skills" value="mysql"> mysql 
+</div>
+
+<div class="form-group">
+    <input type="CCTC" name="CCTC" id="CCTC" class="form-control" placeholder="CCTC" #CCTC="ngModel"ngModel required>
+    <div *ngIf="CCTC.touched && CCTC.invalid">
+        <p class="alert-danger"   *ngIf="CCTC.errors.required">*This field is required</p>
+
+    </div>
+</div>
+<div class="form-group">
+    <input type="ECTC" name="ECTC" id="ECTC" class="form-control" placeholder="ECTC" #ECTC="ngModel"ngModel required>
+    <div *ngIf="ECTC.touched && ECTC.invalid">
+        <p class="alert-danger"   *ngIf="ECTC.errors.required">*This field is required</p>
+
+    </div>
+</div>
+<div class="form-group">
+    <input type="Readytorelocate" name="Readytolocate" id="Readytorelocate" class="form-control" placeholder="Ready to relocate" #Readytorelocate="ngModel"ngModel required>
+    <div *ngIf="Readytorelocate.touched && Readytorelocate.invalid">
+        <p class="alert-danger"   *ngIf="Readyrorelocate.errors.required">*This field is required</p>
+
+    </div>
+</div>
+<div class="form-group">
+    <button type="submit" class="btn-outline-success float-right">AddRequeried</button>
+</div>
+
+
+
+</form>
