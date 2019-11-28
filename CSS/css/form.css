@@ -1,0 +1,48 @@
+form{
+    color:white;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 250px;
+    padding: 10px;
+    background-color: pink;
+    margin-top: 250px ;
+    margin-left: 580px;
+    text-align: center;
+    font-size: large;
+    font-family: cursive;
+    background-image: url(/Image/giphy.gif);
+    background-size: cover;
+}
+body{
+background-image: url(/Image/1553761957-that-wanaka-tree.jpg);
+background-size: cover;
+}
+input[type="text"], input[type="password"]{
+    width: 200px;
+    height: 30px;
+    border: 1px dotted rgb(109, 27, 27);
+    border-radius: 25px;
+}
+input[type="text"] :focus, input[type="password"]:focus{
+    outline: none;
+}
+
+input[type="text"] :focus, input[type="username"]:focus{
+    outline: none;
+}
+
+input[type="submit"]{
+    margin:5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    font-size: small;
+    border: 1px solid gray;
+}
+input[type="submit"]:hover{
+background-color: rgb(72, 139, 72);
+border: 2px solid white
+}

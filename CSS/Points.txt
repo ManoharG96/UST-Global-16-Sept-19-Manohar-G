@@ -1,0 +1,10 @@
+selectors
+1.element selectors
+2.ID selectors
+3.class selectors
+4.attribute selectors
+5.pseudo selectors
+6.universal selectors
+
+for id ---> #
+for class----> dot (.)
