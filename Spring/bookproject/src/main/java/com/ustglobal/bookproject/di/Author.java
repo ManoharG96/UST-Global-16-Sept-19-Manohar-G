@@ -1,0 +1,10 @@
+package com.ustglobal.bookproject.di;
+
+import lombok.Data;
+
+@Data
+public class Author {
+	
+	private String name;
+	private String penName;
+}

@@ -1,0 +1,25 @@
+package com.ustglobal.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class HelloController {
+
+	@RequestMapping(path = "/hello")
+	public String hello(@RequestParam("name") String name,
+			@RequestParam("id")int id, ModelMap map) {
+		map.addAttribute("message", "Hello People");
+		map.addAttribute("name: ", name);
+		map.addAttribute("Id: ", id);
+		return "index";
+	}	
+	
+	@RequestMapping(path = "/hi")
+	public String hi(ModelMap map) {
+		map.addAttribute("message", "Hi Java People");
+		return "index";
+	}
+}

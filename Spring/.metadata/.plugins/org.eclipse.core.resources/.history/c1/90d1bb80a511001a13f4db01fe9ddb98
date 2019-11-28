@@ -1,0 +1,20 @@
+package com.ustglobal.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+
+	@RequestMapping(path = "/hello")
+	public String hello(ModelMap map) {
+		map.addAttribute("message", "Hello People");
+		return "index";
+	}	
+	
+	public String hi(ModelMap map) {
+		map.addAttribute("message","Hi Java People");
+		return "index";
+	}
+}

@@ -1,0 +1,13 @@
+
+<%
+	String s = (String) request.getAttribute("message");
+String name = (String) request.getAttribute("name");
+int id = (Integer) request.getAttribute("id");
+%>
+
+<html>
+<body>
+	<h2 style="color: red">${message}</h2>
+	<h2 style="color: green"><%=s%></h2>
+</body>
+</html>
