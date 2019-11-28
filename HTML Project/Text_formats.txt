@@ -1,0 +1,9 @@
+<b> Blod text
+<big> big text
+<i> italics 
+<small> small
+<strong> strong
+<em> emphasized text
+<sub> subcripted 
+<sup> superscripted text
+<u> underline text

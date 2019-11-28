@@ -1,0 +1,5 @@
+1.In header file there are h1....h6.
+2.contr + / make that line as comment.
+3.for space use command &nbsp;.
+4.<br> is used to the break the single line.
+5.
