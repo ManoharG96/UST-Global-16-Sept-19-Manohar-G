@@ -1,3 +1,2 @@
 #Tomcat publish data
-#Thu Nov 28 16:28:02 IST 2019
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\manoh\\.m2\\repository\\org\\springframework\\spring-web\\5.0.8.RELEASE\\spring-web-5.0.8.RELEASE.jar=WEB-INF/lib/spring-web-5.0.8.RELEASE.jar
+#Fri Nov 29 23:47:37 IST 2019

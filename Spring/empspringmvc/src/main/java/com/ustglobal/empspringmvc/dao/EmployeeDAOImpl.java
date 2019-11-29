@@ -3,36 +3,52 @@ package com.ustglobal.empspringmvc.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceUnit;
+import javax.persistence.TypedQuery;
+
+import org.springframework.stereotype.Repository;
 
 import com.ustglobal.empspringmvc.dto.EmployeeBean;
 
+@Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("employee-unit");
-	
+	@PersistenceUnit
+	private EntityManagerFactory factory;
+
 	@Override
 	public EmployeeBean login(int id, String password) {
-		
-		return null;
+
+		String jpql = "from EmployeeBean where id=:id and password=:pass";
+		EntityManager manager = factory.createEntityManager();
+		TypedQuery<EmployeeBean> query = manager.createQuery(jpql, EmployeeBean.class);
+		query.setParameter("id", id);
+		query.setParameter("pass", password);
+		try {
+			EmployeeBean bean = query.getSingleResult();
+			return bean;
+		}catch (Exception e) {
+			System.out.println(e.getMessage());	
+			return null;
+		}
+
 	}
 
 	@Override
-	public boolean registerEmployee(EmployeeBean bean) {
-	
+	public int registerEmployee(EmployeeBean bean) {
+
 		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
 		try {
 			manager.persist(bean);
 			transaction.commit();
-			return true;
-			
+			return bean.getId();
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
-			return false;
+			return 0;
 		}
-		
+
 	}
 
 	@Override
@@ -44,13 +60,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		manager.remove(deleteBean);
 		transaction.commit();
 		return true;
-		
+
 	}
 
 	@Override
 	public EmployeeBean searchEmployee(int id) {
 		EntityManager manager = factory.createEntityManager();
-				
 		return manager.find(EmployeeBean.class, id);
 	}
 
@@ -59,14 +74,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-		
+
 		EmployeeBean employeeBean = manager.find(EmployeeBean.class, bean.getId());
-		employeeBean.setId(bean.getId());
 		employeeBean.setName(bean.getName());
 		employeeBean.setEmail(bean.getEmail());
-		employeeBean.setPassword(bean.getPassword());
 		employeeBean.setDoj(bean.getDoj());
 		employeeBean.setGender(bean.getGender());
+		transaction.commit();
 		return true;
 	}
 
@@ -80,7 +94,4 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		transaction.commit();
 		return true;
 	}
-
-	
-	
 }

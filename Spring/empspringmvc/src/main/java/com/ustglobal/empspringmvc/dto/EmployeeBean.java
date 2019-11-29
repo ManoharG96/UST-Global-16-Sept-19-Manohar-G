@@ -12,22 +12,23 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "employee") //creating table name
+@Table  (name="employee")
 public class EmployeeBean {
 
-	@Id //primary key
-	@Column //creating a column
-	@GeneratedValue //generate auto Id by increasing 1
+	@Id
+	@Column
+	@GeneratedValue 
 	private int id;
 	@Column
 	private String name;
-	@Column (unique = true)
-	private String email;
 	@Column
 	private String password;
+	@Column
+	private String email;
 	@Column
 	private Date doj;
 	@Column
 	private String gender;
-
+	
+	
 }
