@@ -1,0 +1,43 @@
+package com.ustglobal.empspringmvc.service;
+
+import com.ustglobal.empspringmvc.dto.EmployeeBean;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public EmployeeBean login(int id, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean registerEmployee(EmployeeBean bean) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public EmployeeBean searchEmployee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateEmployee(EmployeeBean bean) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean changePassword(int id, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
