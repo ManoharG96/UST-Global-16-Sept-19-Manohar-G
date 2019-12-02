@@ -1,5 +1,7 @@
 package com.ustglobal.productspringmvc.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -64,6 +66,14 @@ public class RetailerDAOImpl implements RetailerDAO {
 		bean.setRetailerPassword(password);
 		transaction.commit();
 		return true;
+	}
+
+	@Override
+	public List<ProductBean> orderList(int id) {
+		String jpql = "from ProductBean where orderId";
+		EntityManager manager = factory.createEntityManager();
+		TypedQuery<RetailerBean> query = manager.createQuery(jpql, RetailerBean.class);
+		return null;
 	}
 
 }

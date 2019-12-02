@@ -26,7 +26,4 @@ public class RetailerBean {
 	@Column
 	private String retailerPassword;
 	
-	@OneToOne
-	@JoinTable (name = "orderId")
-	private RetailerBean reInfo;
 }

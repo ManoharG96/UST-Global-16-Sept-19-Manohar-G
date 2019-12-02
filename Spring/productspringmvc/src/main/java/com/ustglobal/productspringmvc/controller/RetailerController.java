@@ -10,11 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
+import com.ustglobal.productspringmvc.dto.OrderBean;
 import com.ustglobal.productspringmvc.dto.ProductBean;
 import com.ustglobal.productspringmvc.dto.RetailerBean;
 import com.ustglobal.productspringmvc.service.RetailerService;
@@ -113,5 +114,10 @@ public class RetailerController {
 			map.addAttribute("message", "Password Not Changed"); 
 		} 
 		return "home"; 
+	}
+
+	@GetMapping ("/orderlist")
+	public String orderList() {
+		return "home";
 	}
 }

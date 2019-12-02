@@ -18,18 +18,19 @@
 	<fieldset>
 		<a href="./changepassword">Change Password</a> <br> <a
 			href="./logout">LogOut</a> <br>
+			<a href="./orderlist">Click me to show OrderList</a><br>
 		<h3>
 			Welcome
 			<%=bean.getRetailerName()%>
 			to DataBase
 		</h3>
-		<legend>Search Employee</legend>
+		<legend>Search Product</legend>
 		<form action="./search">
 			<table>
 				<tr>
 					<td>Enter product Id to search:</td>
 					<td><input type="text" name="orderId" required="required"></td>
-					<td><input type="submit" value="search"></td>
+					<td><input type="submit" value="search" name="orderlist"></td>
 				</tr>
 			</table>
 		</form>
@@ -48,7 +49,7 @@
 			<th>Price per unit</th>
 			<th>product Quantity</th>
 			<th>Amount payable</th>
-			<th>Retailer Id</th>
+			<th>Buy</th>
 		</tr>
 		<tr>
 			<td><%=productBean.getOrderId()%></td>
@@ -56,7 +57,7 @@
 			<td><%=productBean.getPricePerUnit()%></td>
 			<td><%=productBean.getProductQuantity()%></td>
 			<td><%=productBean.getAmountPayable()%></td>
-			<td><%=bean.getRetailerId()%></td>
+			<td><input type="submit" value="Buy"></td>
 		</tr>
 	</table>
 

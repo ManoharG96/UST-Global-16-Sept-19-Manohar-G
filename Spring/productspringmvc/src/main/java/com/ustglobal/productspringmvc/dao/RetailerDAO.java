@@ -1,5 +1,7 @@
 package com.ustglobal.productspringmvc.dao;
 
+import java.util.List;
+
 import com.ustglobal.productspringmvc.dto.ProductBean;
 import com.ustglobal.productspringmvc.dto.RetailerBean;
 
@@ -9,5 +11,6 @@ public interface RetailerDAO {
 	public int register(RetailerBean bean);
 	public ProductBean searchProduct(int id);
 	public boolean changePassword(int id, String password);
+	public List<ProductBean> orderList(int id); 
 
 }
