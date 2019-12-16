@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="R:\UST Global\rms"/>
+			<item value="R:\UST Global\Software\rms"/>
 			<item value="R:\UST Global\Spring"/>
 		</list>
 	</section>

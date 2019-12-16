@@ -10,13 +10,9 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Data
-@Entity
 @Table (name = "product")
 public class ProductBean {
-
-	@Id
-	@Column
-	private int orderId;
+	
 	@Column
 	private String productName;
 	@Column

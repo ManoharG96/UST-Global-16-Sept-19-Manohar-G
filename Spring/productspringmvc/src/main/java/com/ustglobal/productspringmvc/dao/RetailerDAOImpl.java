@@ -18,7 +18,7 @@ public class RetailerDAOImpl implements RetailerDAO {
 
 	@PersistenceUnit
 	private EntityManagerFactory factory;
-	
+
 	@Override
 	public RetailerBean login(int id, String password) {
 
@@ -70,10 +70,9 @@ public class RetailerDAOImpl implements RetailerDAO {
 
 	@Override
 	public List<ProductBean> orderList(int id) {
-		String jpql = "from ProductBean where orderId";
-		EntityManager manager = factory.createEntityManager();
-		TypedQuery<RetailerBean> query = manager.createQuery(jpql, RetailerBean.class);
+		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

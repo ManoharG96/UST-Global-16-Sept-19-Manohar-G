@@ -1,0 +1,19 @@
+1575263477341	Delete element
+1575263751550	Move 'web.xml' to 'view'
+1575263901797	Move 'web.xml' to 'webapp'
+1575263907856	Move 'index.jsp' to 'view'
+1575263915521	Move 'web.xml' to 'WEB-INF'
+1575264353527	Rename package 'com.ustglobal.productspringmvc.dto'
+1575265032981	Delete element
+1575265241023	Rename type 'Retailer'
+1575266230392	Rename type 'ProductInfo'
+1575266242991	Rename type 'RetailerInfo'
+1575267152052	Delete element
+1575267941528	Delete element
+1575268505676	Delete element
+1575270325881	Rename package 'com.ustglobal.productspringmvc.bean'
+1575270886787	Delete element
+1575285948087	Rename type 'OrderList'
+1575356809269	Copy file
+1575356871528	Copy folder
+1575357114148	Copy compilation unit
