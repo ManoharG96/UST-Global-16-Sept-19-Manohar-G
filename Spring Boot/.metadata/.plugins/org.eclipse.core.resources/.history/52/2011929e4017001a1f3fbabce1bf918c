@@ -1,0 +1,5 @@
+package com.ustglobal.dependencydemo.dto;
+
+public class DepartmentBean {
+
+}

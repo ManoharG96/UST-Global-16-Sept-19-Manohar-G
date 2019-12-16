@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ustglobal.dependencydemo.dto.Employee&apos; to &apos;EmployeeBean&apos;&#x0D;&#x0A;- Original project: &apos;DependencyDemo&apos;&#x0D;&#x0A;- Original element: &apos;com.ustglobal.dependencydemo.dto.Employee&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ustglobal.dependencydemo.dto.EmployeeBean&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Employee&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.ustglobal.dependencydemo.dto{Employee.java[Employee" matchStrategy="1" name="EmployeeBean" qualified="false" references="true" similarDeclarations="false" stamp="1575537126943" textual="false" version="1.0"/>
+</session>

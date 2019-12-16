@@ -1,0 +1,19 @@
+package com.ustglobal.employeewebapp.controller;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class EmployeeController {
+
+	@RequestMapping ("/details")
+	public String disp(@RequestParam ("name") String ename, HttpSession session) {
+		
+		session.setAttribute("name", ename);
+		System.out.println("Employee name: "+ename);
+		return "employee";
+	}
+}

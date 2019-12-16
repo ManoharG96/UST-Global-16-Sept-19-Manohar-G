@@ -1,0 +1,14 @@
+package com.ustglobal.employeewebapp.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class EmployeeController {
+
+	@RequestMapping ("/details")
+	public String disp() {
+		System.out.println("Employee Details are displaying");
+		return "employee.jsp";
+	}
+}

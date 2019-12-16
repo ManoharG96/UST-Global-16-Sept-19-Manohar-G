@@ -1,0 +1,17 @@
+package com.ustglobal.dependencydemo.dto;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Data
+@Component
+public class DepartmentBean {
+
+	private int did;
+	private int dname;
+	
+	public String disp() {
+		return "Dept object is created";
+	}
+}

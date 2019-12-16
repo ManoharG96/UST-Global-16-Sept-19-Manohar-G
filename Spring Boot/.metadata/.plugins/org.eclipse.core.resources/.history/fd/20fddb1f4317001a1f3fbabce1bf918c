@@ -1,0 +1,8 @@
+package com.ustglobal.employeewebapp.controller;
+
+public class EmployeeController {
+
+	public void disp() {
+		System.out.println("Employee Details are displaying");
+	}
+}
