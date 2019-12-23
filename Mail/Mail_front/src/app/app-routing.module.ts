@@ -8,6 +8,7 @@ import { SentMailComponent } from './sent-mail/sent-mail.component';
 import { DeletedComponent } from './deleted/deleted.component';
 import { DraftedComponent } from './drafted/drafted.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ImageComponent } from './image/image.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path : 'sent-mail', component: SentMailComponent},
   {path : 'delete-mail', component: DeletedComponent},
   {path : 'draft-mail', component: DraftedComponent},
-  {path : 'change-password', component: ChangePasswordComponent}
+  {path : 'change-password', component: ChangePasswordComponent},
+  {path : 'image', component: ImageComponent}
 ];
 
 @NgModule({

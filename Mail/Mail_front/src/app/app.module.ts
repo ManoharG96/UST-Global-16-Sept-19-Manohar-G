@@ -15,6 +15,7 @@ import { SentMailComponent } from './sent-mail/sent-mail.component';
 import { DeletedComponent } from './deleted/deleted.component';
 import { DraftedComponent } from './drafted/drafted.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     SentMailComponent,
     DeletedComponent,
     DraftedComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

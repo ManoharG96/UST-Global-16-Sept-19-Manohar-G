@@ -1,6 +1,6 @@
-
-<form action="" class="col-md-4 offset-4 mt-4 mb-4 bg-dark card card-body" #form="ngForm" (ngSubmit)="registerData(form)" method="POST">
-    <h1 class="text-center text-white"> Register </h1>
+<div id="image">
+<form action="" class="col-md-4 offset-4 mt-4 mb-4 bg-secondary card card-body" #form="ngForm" (ngSubmit)="registerData(form)" method="POST">
+    <h1 class="text-center text-white"> <u>Register</u> </h1>
     <div class="form-group">
         <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name...." #user_name="ngModel" ngModel pattern="^[A-Z]+[a-zA-Z ]*$" required minlength="6">
         <div *ngIf="user_name.touched && user_name.invalid">
@@ -33,7 +33,9 @@
     
 
     <div class="form-group">
-        <a routerLink="/login"> <button class="btn btn-outline-success float-center">Login</button> </a>
-        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >Register</button>
+        <a routerLink="/login"> <button class="btn btn-outline-primary float-center">Login</button> </a>
+        <button type="submit" class="btn btn-outline-warning float-right" [disabled]="form.invalid" >Register</button>
     </div>
+
 </form>
+</div>

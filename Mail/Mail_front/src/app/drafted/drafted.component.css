@@ -23,8 +23,8 @@
     width: 75%;
 }
 .mail-box .sm-side .user-head {
-    background: none repeat scroll 0 0 #00a8b3;
-    border-radius: 4px 0 0;
+    background: none repeat scroll 0 0 #a83b7b9f;
+    border-radius: 4px 0 0; 
     color: #fff;
     min-height: 80px;
     padding: 10px;
@@ -50,13 +50,13 @@
     color: #fff;
 }
 .user-head .user-name span a {
-    color: #87e2e7;
+    color: #181816;
     font-size: 12px;
 }
 a.mail-dropdown {
-    background: none repeat scroll 0 0 #80d3d9;
+    background: none repeat scroll 0 0 #302f2e;
     border-radius: 2px;
-    color: #01a7b3;
+    color: #302f2c;
     font-size: 10px;
     margin-top: 20px;
     padding: 3px 5px;
@@ -137,7 +137,7 @@ ul.labels-info li a i {
     padding: 0 22px;
 }
 .inbox-head {
-    background: none repeat scroll 0 0 #41cac0;
+    background: none repeat scroll 0 0 #1a1d1d;
     border-radius: 0 4px 0 0;
     color: #fff;
     min-height: 80px;

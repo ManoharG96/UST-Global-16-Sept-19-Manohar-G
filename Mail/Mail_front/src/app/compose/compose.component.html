@@ -1,19 +1,19 @@
 <div class="col-md-4 mt-5 card card-body offset-4">
-    <h3 class="form-control bg-dark text-success">Compose Email</h3>
+    <h3 class="form-control bg-dark text-primary text-center">Compose Email</h3>
 <form role="form" #form="ngForm" class="form-horizontal" (ngSubmit)="composeEmail(form)">
     <div class="row">
         <form #form1="ngForm" (click)="searchEmail(form1)" method="POST">
             
                 <div class="form-group">
-                    <label class="control-label">Email</label>
+                    <label class="control-label"></label>
                     <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email...." #email="ngModel" ngModel pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                     <div *ngIf="email.touched && email.invalid">
                         <div *ngIf="email.errors.required" class="text-danger text-center"> * this field is required</div>
                     </div>
                     <div *ngIf="email.errors && (email.touched || email.dirty)" class="text-danger text-center">
-                        <div [hidden]="!email.errors?.pattern"> * enter a valid email address </div>
+                        <div [hidden]="!email.errors?.pattern"> * please enter a valid email address </div>
                     </div>
-                    <button type="button" class="btn btn-outline-success float-right" *ngIf="!isEmail">Search</button>
+                    <button type="button" class="btn btn-outline-primary float-right" *ngIf="!isEmail">Search</button>
                 </div>
         </form>
     </div>
@@ -35,7 +35,7 @@
 
     <div class="form-group">
         <button type="submit" routerLink="/home" class="btn btn-outline-success float-left">Back</button>
-        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >Send</button>
+        <button type="submit" class="btn btn-outline-warning float-right" [disabled]="form.invalid" >Send</button>
     </div>
 </div>
 </form>
